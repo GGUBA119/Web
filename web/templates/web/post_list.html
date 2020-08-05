@@ -26,6 +26,18 @@
             <h3><a href= "">EXTRACT PACKING</a></h3>
             <P>Push the button and Extract Packing Name, Size, Price, Qty</P>            
         </div>
+
+        <div>
+            <p>------------------------------------------------------------------------</p>
+                        
+            {% for post in posts %}
+                <div>
+                    <p>published: {{ post.published_date }}</p>
+                    <h1><a href = "">{{ post.title }}</a></h1>
+                    <p>{{ post.text|linebreaksbr }}</p>    
+                </div>
+            {% endfor %}
+        </div>
         
     </body>
     
